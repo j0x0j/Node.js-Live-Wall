@@ -1,6 +1,6 @@
 assets  = require 'connect-assets'
 express = require 'express'
-app = express.createServer()
+app = require('http-proxy').express.createServer()
 io = require('socket.io').listen(app)
 _ = require 'underscore'
 
