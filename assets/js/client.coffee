@@ -3,7 +3,7 @@ $ ->
 	display = $('display')
 	controls = $('controls')
 	_body = $('body')
-	socket = new io.connect()
+	socket = new io.connect(null, {port: 80, rememberTransport: false})
 	
 	socket.on 'news', (data) ->
 		display = $('#display')
