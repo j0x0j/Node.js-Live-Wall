@@ -3,7 +3,10 @@ $ ->
 	display = $('display')
 	controls = $('controls')
 	_body = $('body')
-	socket = new io.connect(null, {port: 80, rememberTransport: false})
+	pad1 = $('#pad_1')
+	pad2 = $('#pad_2')
+	pad3 = $('#pad_3')
+	socket = new io.connect()
 	
 	socket.on 'news', (data) ->
 		display = $('#display')
@@ -27,3 +30,15 @@ $ ->
 			entry_el.prop 'value', ''
 			entry_el.focus()
 			display.append '<p>' + msg + '</p>'
+			
+	pad1.click ->
+		#console.log 'hey hey'
+		socket.emit 'message', {mymsg: 'x red 1'}
+	
+	pad2.click ->
+		#console.log 'hey hey 2'
+		socket.emit 'message', {mymsg: 'x green 2'}
+	
+	pad3.click ->
+		#console.log 'hey hey 3'
+		socket.emit 'message', {mymsg: 'x blue 3'}

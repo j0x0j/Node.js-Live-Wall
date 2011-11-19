@@ -1,0 +1,285 @@
+info it worked if it ends with ok
+verbose cli [ 'node',
+verbose cli   '/Users/Jo/local/node/bin/npm',
+verbose cli   'install',
+verbose cli   'pepr',
+verbose cli   'express' ]
+info using npm@1.0.10
+info using node@v0.4.9-pre
+verbose config file /Users/Jo/.npmrc
+verbose config file /Users/Jo/local/node/etc/npmrc
+silly testEngine { name: 'pepper',
+silly testEngine   version: '0.0.2',
+silly testEngine   main: './lib/server',
+silly testEngine   dependencies: 
+silly testEngine    { 'connect-assets': '2.1.4',
+silly testEngine      express: '2.5.0',
+silly testEngine      jade: '0.16.2',
+silly testEngine      nib: '0.2.0',
+silly testEngine      stylus: '0.19.2',
+silly testEngine      underscore: '1.2.1',
+silly testEngine      'socket.io': '0.8.7' },
+silly testEngine   devDependencies: 
+silly testEngine    { 'coffee-script': '>=1.1.3',
+silly testEngine      'watch-tree': '>=0.1.1' },
+silly testEngine   _id: 'pepper@0.0.2',
+silly testEngine   scripts: { start: 'node server.js' },
+silly testEngine   engines: { node: '*' },
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.10',
+silly testEngine   _nodeVersion: 'v0.4.9-pre',
+silly testEngine   _defaultsLoaded: true }
+verbose caching /Users/Jo/Sites/nodeapps/pepr.no.de/package.json
+verbose loadDefaults pepper@0.0.2
+silly testEngine { name: 'coffee-script',
+silly testEngine   description: 'Unfancy JavaScript',
+silly testEngine   keywords: [ 'javascript', 'language', 'coffeescript', 'compiler' ],
+silly testEngine   author: { name: 'Jeremy Ashkenas' },
+silly testEngine   version: '1.1.3',
+silly testEngine   licenses: 
+silly testEngine    [ { type: 'MIT',
+silly testEngine        url: 'http://github.com/jashkenas/coffee-script/raw/master/LICENSE' } ],
+silly testEngine   engines: { node: '>=0.4.0' },
+silly testEngine   directories: { lib: './lib/coffee-script' },
+silly testEngine   main: './lib/coffee-script/coffee-script',
+silly testEngine   bin: { coffee: './bin/coffee', cake: './bin/cake' },
+silly testEngine   homepage: 'http://coffeescript.org',
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/jashkenas/coffee-script.git' },
+silly testEngine   devDependencies: { 'uglify-js': '1.0.6', jison: '0.2.11' },
+silly testEngine   _id: 'coffee-script@1.1.3',
+silly testEngine   dependencies: {},
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.10',
+silly testEngine   _nodeVersion: 'v0.4.9-pre',
+silly testEngine   _defaultsLoaded: true }
+verbose caching /Users/Jo/Sites/nodeapps/pepr.no.de/node_modules/coffee-script/package.json
+verbose loadDefaults coffee-script@1.1.3
+silly testEngine { author: 
+silly testEngine    { name: 'Trevor Burnham',
+silly testEngine      url: 'http://trevorburnham.com' },
+silly testEngine   name: 'connect-assets',
+silly testEngine   description: 'A Rails-like asset pipeline for Connect',
+silly testEngine   version: '2.1.4',
+silly testEngine   homepage: 'http://github.com/TrevorBurnham/connect-assets',
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/TrevorBurnham/connect-assets.git' },
+silly testEngine   main: 'lib/assets.js',
+silly testEngine   dependencies: 
+silly testEngine    { 'connect-file-cache': '0.2.3',
+silly testEngine      mime: '1.2.2',
+silly testEngine      snockets: '1.3.3',
+silly testEngine      underscore: '1.1.7' },
+silly testEngine   devDependencies: 
+silly testEngine    { async: '0.1.14',
+silly testEngine      'coffee-script': '1.1.2',
+silly testEngine      connect: '1.6.4',
+silly testEngine      nib: '0.2.0',
+silly testEngine      nodeunit: '0.5.4',
+silly testEngine      stylus: '0.19.0',
+silly testEngine      request: '2.1.1',
+silly testEngine      'watch-tree': '0.1.1' },
+silly testEngine   _id: 'connect-assets@2.1.4',
+silly testEngine   engines: { node: '*' },
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.10',
+silly testEngine   _nodeVersion: 'v0.4.9-pre',
+silly testEngine   _defaultsLoaded: true }
+verbose caching /Users/Jo/Sites/nodeapps/pepr.no.de/node_modules/connect-assets/package.json
+verbose loadDefaults connect-assets@2.1.4
+silly testEngine { name: 'socket.io',
+silly testEngine   version: '0.8.7',
+silly testEngine   description: 'Real-time apps made cross-browser & easy with a WebSocket-like API',
+silly testEngine   homepage: 'http://socket.io',
+silly testEngine   keywords: 
+silly testEngine    [ 'websocket',
+silly testEngine      'socket',
+silly testEngine      'realtime',
+silly testEngine      'socket.io',
+silly testEngine      'comet',
+silly testEngine      'ajax' ],
+silly testEngine   author: 
+silly testEngine    { name: 'Guillermo Rauch',
+silly testEngine      email: 'guillermo@learnboost.com' },
+silly testEngine   contributors: 
+silly testEngine    [ { name: 'Guillermo Rauch', email: 'rauchg@gmail.com' },
+silly testEngine      { name: 'Arnout Kazemier',
+silly testEngine        email: 'info@3rd-eden.com' },
+silly testEngine      { name: 'Vladimir Dronnikov',
+silly testEngine        email: 'dronnikov@gmail.com' },
+silly testEngine      { name: 'Einar Otto Stangvik',
+silly testEngine        email: 'einaros@gmail.com' } ],
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/LearnBoost/socket.io.git' },
+silly testEngine   dependencies: 
+silly testEngine    { 'socket.io-client': '0.8.7',
+silly testEngine      policyfile: '0.0.4',
+silly testEngine      redis: '0.6.7' },
+silly testEngine   devDependencies: 
+silly testEngine    { expresso: '0.9.2',
+silly testEngine      should: '0.0.4',
+silly testEngine      assertvanish: '0.0.3-1',
+silly testEngine      benchmark: '0.2.2',
+silly testEngine      microtime: '0.1.3-1',
+silly testEngine      colors: '0.5.1' },
+silly testEngine   main: 'index',
+silly testEngine   engines: { node: '>= 0.4.0' },
+silly testEngine   _id: 'socket.io@0.8.7',
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.10',
+silly testEngine   _nodeVersion: 'v0.4.9-pre',
+silly testEngine   _defaultsLoaded: true }
+verbose caching /Users/Jo/Sites/nodeapps/pepr.no.de/node_modules/socket.io/package.json
+verbose loadDefaults socket.io@0.8.7
+silly testEngine { name: 'underscore',
+silly testEngine   description: 'JavaScript\'s functional programming helper library.',
+silly testEngine   homepage: 'http://documentcloud.github.com/underscore/',
+silly testEngine   keywords: [ 'util', 'functional', 'server', 'client', 'browser' ],
+silly testEngine   author: 
+silly testEngine    { name: 'Jeremy Ashkenas',
+silly testEngine      email: 'jeremy@documentcloud.org' },
+silly testEngine   contributors: [],
+silly testEngine   dependencies: {},
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/documentcloud/underscore.git' },
+silly testEngine   main: 'underscore.js',
+silly testEngine   version: '1.2.1',
+silly testEngine   _id: 'underscore@1.2.1',
+silly testEngine   devDependencies: {},
+silly testEngine   engines: { node: '*' },
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.10',
+silly testEngine   _nodeVersion: 'v0.4.9-pre',
+silly testEngine   _defaultsLoaded: true }
+verbose caching /Users/Jo/Sites/nodeapps/pepr.no.de/node_modules/underscore/package.json
+verbose loadDefaults underscore@1.2.1
+silly testEngine { name: 'watch-tree',
+silly testEngine   version: '0.1.1',
+silly testEngine   description: 'Yet another library for watching FS trees. Includes a JSON-on-stdout command-line tool and {filePreexisted,allPreexistingFilesReported} events.',
+silly testEngine   url: 'https://github.com/tafa/node-watch-tree',
+silly testEngine   main: 'lib/watch-tree.js',
+silly testEngine   bin: { 'watch-tree': 'bin/watch-tree' },
+silly testEngine   dependencies: 
+silly testEngine    { optimist: '>=0.1.2',
+silly testEngine      async: '>=0.1.7',
+silly testEngine      underscore: '>=1.1.4',
+silly testEngine      'coffee-script': '>=1.0.0',
+silly testEngine      async_testing: '>=0.3.2' },
+silly testEngine   author: 
+silly testEngine    { name: 'Andrew Schaaf',
+silly testEngine      email: 'andrew@andrewschaaf.com' },
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/tafa/node-watch-tree.git' },
+silly testEngine   _id: 'watch-tree@0.1.1',
+silly testEngine   devDependencies: {},
+silly testEngine   engines: { node: '*' },
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.10',
+silly testEngine   _nodeVersion: 'v0.4.9-pre',
+silly testEngine   _defaultsLoaded: true }
+verbose caching /Users/Jo/Sites/nodeapps/pepr.no.de/node_modules/watch-tree/package.json
+verbose loadDefaults watch-tree@0.1.1
+silly testEngine { name: 'nib',
+silly testEngine   description: 'Stylus mixins and utilities',
+silly testEngine   version: '0.2.0',
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/visionmedia/nib.git' },
+silly testEngine   devDependencies: 
+silly testEngine    { connect: '1.4.1',
+silly testEngine      jade: '0.11.0',
+silly testEngine      stylus: '0.15.x',
+silly testEngine      canvas: '>= 0.0.1' },
+silly testEngine   author: 
+silly testEngine    { name: 'TJ Holowaychuk',
+silly testEngine      email: 'tj@vision-media.ca' },
+silly testEngine   main: 'lib/nib.js',
+silly testEngine   engines: { node: '*' },
+silly testEngine   _id: 'nib@0.2.0',
+silly testEngine   dependencies: {},
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.10',
+silly testEngine   _nodeVersion: 'v0.4.9-pre',
+silly testEngine   _defaultsLoaded: true }
+verbose caching /Users/Jo/Sites/nodeapps/pepr.no.de/node_modules/nib/package.json
+verbose loadDefaults nib@0.2.0
+silly testEngine { name: 'jade',
+silly testEngine   description: 'Jade template engine',
+silly testEngine   version: '0.17.0',
+silly testEngine   author: 
+silly testEngine    { name: 'TJ Holowaychuk',
+silly testEngine      email: 'tj@vision-media.ca' },
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/visionmedia/jade.git' },
+silly testEngine   main: './index.js',
+silly testEngine   bin: { jade: './bin/jade' },
+silly testEngine   dependencies: { commander: '0.2.x', mkdirp: '>= 0.0.7' },
+silly testEngine   devDependencies: 
+silly testEngine    { expresso: '0.9.2',
+silly testEngine      'coffee-script': '>= 0.0.1',
+silly testEngine      sass: '>= 0.0.1',
+silly testEngine      less: '>= 0.0.1',
+silly testEngine      markdown: '>= 0.0.1',
+silly testEngine      stylus: '>= 0.0.1',
+silly testEngine      uubench: '0.0.1',
+silly testEngine      'uglify-js': '>= 1.0.7' },
+silly testEngine   scripts: { prepublish: 'npm prune' },
+silly testEngine   engines: { node: '>= 0.1.98' },
+silly testEngine   _id: 'jade@0.17.0',
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.10',
+silly testEngine   _nodeVersion: 'v0.4.9-pre',
+silly testEngine   _defaultsLoaded: true }
+verbose caching /Users/Jo/Sites/nodeapps/pepr.no.de/node_modules/jade/package.json
+verbose loadDefaults jade@0.17.0
+silly testEngine { name: 'stylus',
+silly testEngine   description: 'Robust, expressive, and feature-rich CSS superset',
+silly testEngine   version: '0.19.2',
+silly testEngine   author: 
+silly testEngine    { name: 'TJ Holowaychuk',
+silly testEngine      email: 'tj@vision-media.ca' },
+silly testEngine   keywords: 
+silly testEngine    [ 'css',
+silly testEngine      'parser',
+silly testEngine      'style',
+silly testEngine      'stylesheets',
+silly testEngine      'jade',
+silly testEngine      'language' ],
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/learnboost/stylus.git' },
+silly testEngine   main: './index.js',
+silly testEngine   engines: { node: '> 0.4.x < 0.7.0' },
+silly testEngine   bin: { stylus: './bin/stylus' },
+silly testEngine   scripts: { prepublish: 'npm prune' },
+silly testEngine   dependencies: { cssom: '0.2.0', growl: '1.1.0', mkdirp: '0.0.7' },
+silly testEngine   _id: 'stylus@0.19.2',
+silly testEngine   devDependencies: {},
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.10',
+silly testEngine   _nodeVersion: 'v0.4.9-pre',
+silly testEngine   _defaultsLoaded: true }
+verbose caching /Users/Jo/Sites/nodeapps/pepr.no.de/node_modules/stylus/package.json
+verbose loadDefaults stylus@0.19.2
+verbose from cache /Users/Jo/Sites/nodeapps/pepr.no.de/package.json
+verbose into /Users/Jo/Sites/nodeapps/pepr.no.de [ 'pepr', 'express' ]
+verbose cache add [ 'pepr', null ]
+verbose cache add [ 'express@2.5.0', null ]
+info addNamed [ 'express', '2.5.0' ]
+verbose addNamed [ '2.5.0', '2.5.0' ]
+ERR! couldn't read package.json in pepr
+ERR! Error: ENOENT, No such file or directory 'pepr/package.json'
+ERR! Report this *entire* log at:
+ERR!     <http://github.com/isaacs/npm/issues>
+ERR! or email it to:
+ERR!     <npm-@googlegroups.com>
+ERR! 
+ERR! System Darwin 10.8.0
+ERR! command "node" "/Users/Jo/local/node/bin/npm" "install" "pepr" "express"
+verbose exit [ 2, true ]
