@@ -1,6 +1,6 @@
 assets  = require 'connect-assets'
 express = require 'express'
-app = require('http-proxy').express.createServer()
+app = express.createServer()
 io = require('socket.io').listen(app)
 _ = require 'underscore'
 
@@ -19,6 +19,12 @@ getSocketId = (which, clients) ->
 		i++
 		if i-1 is which
 			 return val.id
+
+automate = (the_socket, socket) -> 
+    random = '#'+Math.floor(Math.random()*16777215).toString(16) 
+    the_socket.emit 'change-color', random 
+    socket.broadcast.emit 'change-color', random
+    #setInterval automate(the_socket, socket), 2000
 	
 io.sockets.on 'connection', (socket) ->
 	clients = io.sockets.sockets
@@ -43,6 +49,9 @@ io.sockets.on 'connection', (socket) ->
 	            io.sockets.socket(_first_client).emit 'change-color', _chunks[1]
 	            socket.broadcast.emit 'news', {hello: _chunks[1]}
 	            console.log _first_client
+	        #when 'random' 
+	            #console.log 'random'
+	            #automate the_socket, socket
 	        when 'x'
 	            the_x_socket = io.sockets.socket getSocketId _chunks[2], clients
 	            the_x_socket.emit 'change-color', _chunks[1]

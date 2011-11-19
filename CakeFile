@@ -23,7 +23,7 @@ build = (watch, callback) ->
 start = ->
   build ->
     node?.kill()
-    options = ['server.js']
+    options = ['lib/server.js']
     node = stream 'node', options
 
 task 'build', 'Compile CoffeeScript source files', ->

@@ -27,5 +27,3 @@ $ ->
 			entry_el.prop 'value', ''
 			entry_el.focus()
 			display.append '<p>' + msg + '</p>'
-	
-	
