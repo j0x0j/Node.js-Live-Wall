@@ -33,12 +33,12 @@ $ ->
 			
 	pad1.click ->
 		#console.log 'hey hey'
-		socket.emit 'message', {mymsg: 'x red 1'}
+		socket.emit 'message', {mymsg: 'x '+$('#color_1').val()+' 1'}
 	
 	pad2.click ->
 		#console.log 'hey hey 2'
-		socket.emit 'message', {mymsg: 'x green 2'}
+		socket.emit 'message', {mymsg: 'x '+$('#color_1').val()+' 2'}
 	
 	pad3.click ->
 		#console.log 'hey hey 3'
-		socket.emit 'message', {mymsg: 'x blue 3'}
+		socket.emit 'message', {mymsg: 'x '+$('#color_1').val()+' 3'}
