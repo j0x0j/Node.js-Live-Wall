@@ -59,5 +59,11 @@ io.sockets.on 'connection', (socket) ->
 app.get '/', (req, res) ->
 	res.render "index.jade", title: 'Pepper'
 
+app.get '/wall', (req, res) ->
+	res.render "wall.jade", layout: false, title: 'Pepper'
+
+app.get '/sqr', (req, res) ->
+	res.render "sqr.jade", layout: false, title: 'Pepper'
+
 app.listen port = process.env.PORT || 5000
 console.log "Now listening on port #{port}..."

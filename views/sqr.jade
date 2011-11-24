@@ -4,7 +4,9 @@ html
     title= title
     script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js')
     script(type='text/javascript', src='/socket.io/socket.io.js')
-    != js('client')
+    != js('sqr')
     != css('styles')
 
-  body(class='thepads')!= body
+  body
+    #thedata
+    #frames

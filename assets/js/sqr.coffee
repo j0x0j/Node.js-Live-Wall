@@ -3,9 +3,6 @@ $ ->
 	display = $('display')
 	controls = $('controls')
 	_body = $('body')
-	
-	pads = $('.pads')
-	
 	socket = new io.connect()
 	
 	socket.on 'news', (data) ->
@@ -30,11 +27,3 @@ $ ->
 			entry_el.prop 'value', ''
 			entry_el.focus()
 			display.append '<p>' + msg + '</p>'
-			
-	pads.click ->
-		#console.log 'hey hey'
-		if $('#color').val()==''
-			thecolor = '#'+Math.floor(Math.random()*16777215).toString(16)
-		else
-		    thecolor = $('#color').val().toLowerCase()
-		socket.emit 'message', {mymsg: 'x '+thecolor+' '+$(this).attr('title')}

@@ -3,9 +3,6 @@ $ ->
 	display = $('display')
 	controls = $('controls')
 	_body = $('body')
-	
-	pads = $('.pads')
-	
 	socket = new io.connect()
 	
 	socket.on 'news', (data) ->
@@ -30,11 +27,19 @@ $ ->
 			entry_el.prop 'value', ''
 			entry_el.focus()
 			display.append '<p>' + msg + '</p>'
-			
-	pads.click ->
-		#console.log 'hey hey'
-		if $('#color').val()==''
-			thecolor = '#'+Math.floor(Math.random()*16777215).toString(16)
-		else
-		    thecolor = $('#color').val().toLowerCase()
-		socket.emit 'message', {mymsg: 'x '+thecolor+' '+$(this).attr('title')}
+	
+	theInterval = setInterval theLoop, 500
+	$('#thedata').data 'theInt', theInterval
+	$('#thedata').data 'counter', 0
+    
+theLoop = () ->
+	console.log $('#thedata').data('theInt')
+	x = $('#thedata').data 'counter'
+	y = x+1
+	$('#thedata').data 'counter', y
+	#clearInterval $('body').data('theInt')
+	console.log $('#thedata').data('counter')
+	$('body').find('#frames').append '<div class="wrap"><iframe style="border:none;" width="100" height="100" src="http://localhost:5000/sqr"></iframe></div>'
+	if $('#thedata').data('counter') > 97
+		clearInterval $('#thedata').data('theInt')
+		alert 'called'

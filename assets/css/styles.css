@@ -1,0 +1,30 @@
+body, html {
+	margin: 0;
+	padding: 0;
+	color:white;
+}
+.thewall {
+	background:black;
+	overflow:hidden;
+}
+.thepads {
+	background:black;
+}
+#frames {
+	width: 100%;
+	overflow: auto;
+}
+.wrap {
+	float: left;
+	width: 100px;
+}
+#display {
+	display: none;
+}
+.pads {
+	float:left;
+	margin:5px 5px 0 0;
+	width:90px;
+	height:90px;
+	background:gray;
+}
