@@ -1,23 +1,16 @@
 (function() {
-  var app, assets, express, getSocketId, io, port, _;
-
+  var app, assets, automate, express, getSocketId, io, port, _;
   assets = require('connect-assets');
-
   express = require('express');
-
   app = express.createServer();
-
   io = require('socket.io').listen(app);
-
   _ = require('underscore');
-
   app.configure(function() {
     app.use(express.bodyParser());
     app.use(assets());
     app.use(express.logger());
     return app.use(express.static('public'));
   });
-
   getSocketId = function(which, clients) {
     var i, key, val;
     which = which - 1;
@@ -25,10 +18,17 @@
     for (key in clients) {
       val = clients[key];
       i++;
-      if (i - 1 === which) return val.id;
+      if (i - 1 === which) {
+        return val.id;
+      }
     }
   };
-
+  automate = function(the_socket, socket) {
+    var random;
+    random = '#' + Math.floor(Math.random() * 16777215).toString(16);
+    the_socket.emit('change-color', random);
+    return socket.broadcast.emit('change-color', random);
+  };
   io.sockets.on('connection', function(socket) {
     var clients, the_socket;
     clients = io.sockets.sockets;
@@ -66,15 +66,23 @@
       }
     });
   });
-
   app.get('/', function(req, res) {
     return res.render("index.jade", {
       title: 'Pepper'
     });
   });
-
+  app.get('/wall', function(req, res) {
+    return res.render("wall.jade", {
+      layout: false,
+      title: 'Pepper'
+    });
+  });
+  app.get('/sqr', function(req, res) {
+    return res.render("sqr.jade", {
+      layout: false,
+      title: 'Pepper'
+    });
+  });
   app.listen(port = process.env.PORT || 5000);
-
   console.log("Now listening on port " + port + "...");
-
 }).call(this);
