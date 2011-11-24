@@ -39,7 +39,7 @@ theLoop = () ->
 	$('#thedata').data 'counter', y
 	#clearInterval $('body').data('theInt')
 	console.log $('#thedata').data('counter')
-	$('body').find('#frames').append '<div class="wrap"><iframe style="border:none;" width="100" height="100" src="http://localhost:5000/sqr"></iframe></div>'
+	$('body').find('#frames').append '<div class="wrap"><iframe style="border:none;" width="100" height="100" src="http://pepr.no.de/sqr"></iframe></div>'
 	if $('#thedata').data('counter') > 97
 		clearInterval $('#thedata').data('theInt')
 		alert 'called'
